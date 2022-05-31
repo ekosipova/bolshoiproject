@@ -1,0 +1,55 @@
+h2#ballet {
+    background-color: goldenrod;
+    background-image: url("https://www.binoculars-travel.ru/wp-content/uploads/lebedinoe-ozero-1024x536.jpg");*/
+    background-size: 50%;
+    padding: 80px 40px;
+    text-align: left;
+    color: white;
+    font-size: 200%;
+}
+
+h2#opera {
+    background-color: goldenrod;
+    background-image: url("https://www.belcanto.ru/media/images/uploaded/19031712.jpg");
+    background-size: 100%;
+    padding: 80px 40px;
+    text-align: left;
+    color: white;
+    font-size: 200%;
+}
+
+h2#orchestra {
+    background-color: goldenrod;
+    background-image: url("https://rossaprimavera.ru/static/files/0b4798fe5506.jpg");
+    background-size: 100%;
+    padding: 80px 40px;
+    text-align: left;
+    color: white;
+    font-size: 200%;
+}
+
+ul#menu h3 {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+#menu {
+  background-image: url("https://img5.goodfon.ru/wallpaper/nbig/c/b8/tekstura-fon-odnotonnye-oboi.jpg");
+  text-align: center;
+}
+
+#menu li {
+  display:inline-block;
+  text-align: center;
+}
+
+#menu a {
+  display: block;
+  padding: 25px 10px;
+  color: white;
+  text-decoration: none;
+
+}
+
+#menu a:hover {
+  background: goldenrod;

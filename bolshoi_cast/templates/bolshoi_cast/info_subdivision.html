@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Каст большого театра
+{% endblock %}
+
+{% block css_additional %}
+    <link rel="stylesheet"  href="{% static 'bolshoi_cast/css/info_subdivision.css' %}">
+{% endblock %}
+
+{% block content %}
+    {% if rus_sub == 'Балет' %}
+        <h2 id="ballet">{{ rus_sub }}</h2>
+    {% elif rus_sub == 'Опера' %}
+        <h2 id="opera">{{ rus_sub }}</h2>
+    {% elif rus_sub == 'Оркестр' %}
+        <h2 id="orchestra">{{ rus_sub }}</h2>
+    {% endif %}
+        <ul id="menu">
+            <li><a href="/bolshoi_cast/main/">Назад</a> </li>
+            {% for key,value in positions.items %}
+                <li><a href="/bolshoi_cast/{{ subdivision }}/{{ key }}">{{ value }}</a></li>
+            {% endfor %}
+        </ul>
+{% endblock %}
