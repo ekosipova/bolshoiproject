@@ -33,6 +33,7 @@ ul#menu h3 {
   margin: 0;
   padding: 0;
 }
+
 #menu {
   background-image: url("https://img5.goodfon.ru/wallpaper/nbig/c/b8/tekstura-fon-odnotonnye-oboi.jpg");
   text-align: center;
@@ -52,4 +53,5 @@ ul#menu h3 {
 }
 
 #menu a:hover {
-  background: goldenrod;
+    background: goldenrod;
+}

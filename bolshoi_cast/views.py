@@ -1,7 +1,10 @@
 from django.shortcuts import render
 from dicts import persons,eng_rus_dict,cast
 
-def all_cast(request):
+def show_main_page(request):
+    return render(request,'bolshoi_cast/mane_page.html')
+
+def show_all_cast(request):
     subdivisions = list(cast)
     subdivision_dict = {}
     for subdivion in subdivisions:
@@ -9,7 +12,7 @@ def all_cast(request):
     data = {
         'subdivision': subdivision_dict
     }
-    return render(request,'bolshoi_cast/mane_page.html',context=data)
+    return render(request, 'bolshoi_cast/cast_page.html', context=data)
 
 def get_info_about_subdivision(request,subdivision:str):
     page = cast.get(subdivision)

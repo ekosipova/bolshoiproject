@@ -1,20 +1,41 @@
-{% extends 'base.html' %}
 {% load static %}
-{% block title %}
-    Главная страничка
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная страничка</title>
+    <style>
+        body {
+           background-image: url("https://cdn.culture.ru/c/339529.884x442.jpg");
+           background-size: 100%;
+        }
 
-{% block css_additional %}
-    <link rel="stylesheet" type="text/css"  href="{% static 'bolshoi_cast/css/mane_page.css' %}">
-{% endblock %}
+        ul {
+            background-color: aliceblue;
+        }
 
+        li {
+            display: inline-block;
+            padding: 30px 50px;
+            font-size: 180%;
+        }
 
-{% block content %}
-   <ul id="menu">
-        <img src="https://www.sostav.ru/app/public/images/news/2013/03/29/6.gif?rand=0.351983303184202" align="left" width="20%">
-        <h3>Каст Большого театра</h3>
-       {% for key,value in subdivision.items %}
-           <h3><a href='/bolshoi_cast/{{key}}'>{{value}}</a></h3>
-       {% endfor %}
-   </ul>
-{% endblock %}
+        a {
+            text-decoration: none;
+            font-size: 100%;
+            color: black;
+        }
+
+        a:hover {
+            color: midnightblue;
+        }
+    </style>
+</head>
+<body>
+   <ul>
+       <li><a href="/bolshoi_cast/main/">Каст театра</a></li>
+       <li>Добро пожаловать в Большой театр!</li>
+       <li><a href="">Написать отзыв</a></li>
+      </ul>
+</body>
+</html>
