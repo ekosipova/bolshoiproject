@@ -14,18 +14,16 @@
        <h2> {{ position|title }}</h2>
         <ul>
         {% for artist in artists %}
-            {% for person,photo in artist.items %}
             <li>
                 <div id="person_list">
                     <h1>
                         <span id="person_photo">
-                            <img src={{ photo }} height="120" border="0">
+                            <img src={{ artist.photo }} height="120" border="0">
                         </span>
-                        {{ person }}
+                        {{ artist.name }} {{ artist.surname }}
                     </h1>
                 </div>
             </li>
-            {% endfor %}
         {% endfor %}
         </ul>
 {% endblock %}

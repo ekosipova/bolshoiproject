@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from dicts import persons,eng_rus_dict,cast
+from dicts import eng_rus_dict,cast
+from .models import Artist
 
 def show_main_page(request):
     return render(request,'bolshoi_cast/mane_page.html')
@@ -28,12 +29,11 @@ def get_info_about_subdivision(request,subdivision:str):
 
 
 def show_information_about_position(request,subdivision:str,position:str):
-    for one_position in persons:
-        if position in one_position:
-            artists = persons[position]
-            data = {
-                'artists':artists,
-                'position':eng_rus_dict[position]
-                    }
-            return render(request,'bolshoi_cast/info_position.html',context=data )
+    all_items = Artist.objects.all()
+    artists = [name for name in all_items if name.position == eng_rus_dict[position]]
+    data = {
+        'artists':artists,
+        'position':eng_rus_dict[position]
+        }
+    return render(request,'bolshoi_cast/info_position.html',context=data )
 
