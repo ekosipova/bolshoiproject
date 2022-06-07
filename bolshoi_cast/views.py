@@ -23,16 +23,15 @@ def get_info_about_subdivision(request,subdivision:str):
     data = {
         'positions':positions,
         'subdivision':subdivision,
-        'rus_sub':eng_rus_dict[subdivision]
+        'rus_name':eng_rus_dict[subdivision]
     }
     return render(request,'bolshoi_cast/info_subdivision.html', context=data)
 
 
 def show_information_about_position(request,subdivision:str,position:str):
-    all_items = Artist.objects.all()
-    artists = [name for name in all_items if name.position == eng_rus_dict[position]]
+    position_artists = (Artist.objects.filter(position=eng_rus_dict[position])).order_by('surname')
     data = {
-        'artists':artists,
+        'artists':position_artists,
         'position':eng_rus_dict[position]
         }
     return render(request,'bolshoi_cast/info_position.html',context=data )

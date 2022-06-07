@@ -12,7 +12,7 @@
 {% block content %}
    <ul id="menu">
         <img src="https://www.sostav.ru/app/public/images/news/2013/03/29/6.gif?rand=0.351983303184202" align="left" width="20%">
-        <h3>Каст Большого театра</h3>
+        <h3><a href={% url 'main' %}>Назад</a></h3>
        {% for key,value in subdivision.items %}
            <h3><a href='/bolshoi_cast/{{key}}'>{{value}}</a></h3>
        {% endfor %}
