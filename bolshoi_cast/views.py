@@ -29,7 +29,7 @@ def get_info_about_subdivision(request,subdivision:str):
 
 
 def show_information_about_position(request,subdivision:str,position:str):
-    position_artists = (Artist.objects.filter(position=eng_rus_dict[position])).order_by('surname')
+    position_artists = (Artist.objects.filter(position=eng_rus_dict[position])).order_by('name')
     data = {
         'artists':position_artists,
         'position':eng_rus_dict[position]
