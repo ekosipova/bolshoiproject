@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="/review/" method="post">
+        {% csrf_token %}
+        <p><strong><label for="name_id">Введите фамилию и имя артиста:</label></strong></p>
+        <input type="text" id="name_id" name="name">
+        <br>
+        <p><strong>Выберите сферу деятельности:</strong></p>
+        <p><select name = 'realm'>
+            <option value="Балет">Балет</option>
+            <option value="Опера">Опера</option>
+            <option value="Оркестр">Оркестр</option>
+        </select>
+        </p>
+        <p><strong><label for="feedback_id">Отзыв:</label></strong></p>
+        <textarea name="feedback" id="feedback_id" cols="30" rows="10"></textarea>
+        <br>
+        <button>Отправить</button>
+    </form>
+</body>
+</html>
