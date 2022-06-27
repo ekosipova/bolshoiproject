@@ -1,10 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-    <h3>Ваш отзыв принят</h3>
-</body>
-</html>
+{% extends 'review/base.html' %}
+{% load static %}
+
+{% block title %} Принято {% endblock %}
+
+{% block css_additional %}
+    <link rel="stylesheet" href="{% static 'review/css/form.css' %}">
+{% endblock %}
+
+{% block content %}
+    <h2>Ваш отзыв принят</h2>
+ {% endblock %}

@@ -1,9 +1,10 @@
 from django.shortcuts import render
 from dicts import eng_rus_dict,cast
 from .models import Artist
+from django.views.generic.base import TemplateView
 
-def show_main_page(request):
-    return render(request,'bolshoi_cast/mane_page.html')
+class MainPage(TemplateView):
+    template_name = 'bolshoi_cast/mane_page.html'
 
 def show_all_cast(request):
     subdivisions = list(cast)

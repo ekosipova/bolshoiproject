@@ -1,14 +1,18 @@
+{% extends 'review/base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Review</title>
+
+{% block title %}
+    Review
+{% endblock %}
+
+{% block css_additional %}
     <link rel="stylesheet" href="{% static 'review/css/form.css' %}">
-</head>
-<body>
-    <h2>Оставьте ваш отзы на артиста</h2>
-    <form action="/review/" method="post">
+{% endblock %}
+
+{% block content %}
+    <h2>Оставьте ваш отзыв на артиста</h2>
+    <h2><a href={% url 'main' %}>Назад</a></h2>
+    <form method="post">
         {% csrf_token %}
         {% for field in form %}
         <div class="form-style {% if field.errors %} errors {% endif %}">
@@ -21,5 +25,4 @@
         <br>
         <button type="submit">Отправить</button>
     </form>
-</body>
-</html>
+{% endblock %}
