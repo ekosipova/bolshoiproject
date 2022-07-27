@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'bolshoi_cast',
     'review',
-    'gallery'
 ]
 
 MIDDLEWARE = [
