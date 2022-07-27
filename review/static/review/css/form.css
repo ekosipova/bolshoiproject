@@ -1,5 +1,5 @@
 html {
-    background-image: url("https://histrf.ru/uploads/media/default/0001/54/03e5006f17909f1f8aecc0a7287c801183c3f1d8.jpeg");
+    background-image: url("https://wikiway.com/upload/resize_cache/hl-photo/9b9/3fb/720_400_1/bolshoi_teatr_64.jpg");
     background-size: 100%;
 }
 
@@ -14,7 +14,9 @@ h2{
     text-align: center;
     padding: 5px;
     border-radius: 5px;
-    box-shadow: 0 2px 8px #3ca3c1;
+    box-shadow: 0 2px 8px white;
+    color: white;
+
 }
 
 form {
@@ -25,20 +27,20 @@ form {
     border-radius: 10px;
     font-size: 16px;
     background-color: white;
-    box-shadow: 0 2px 8px #3ca3c1;
+    box-shadow: 0 2px 8px black;
 }
 
 button {
     cursor: pointer;
-    background-color: #bf0d55;
-    color: white;
-    border: 10px solid #bf0d55;
+    background-color: black;
+    color: gray;
+    border: 10px solid black;
 }
 
 button:hover,
 button:active {
-    background-color: #320777;
-    border-color: #320777;
+    background-color: red;
+    border-color: white;
 }
 
 .form-style {
@@ -55,7 +57,7 @@ button:active {
 }
 
 .form-style input:focus {
-    border-color: #1f0050;
+    border-color: white;
     background-color: #f4eeff;
     outline: none;
 }
@@ -70,14 +72,14 @@ button:active {
     list-style: none;
     margin: 0;
     padding: 0;
-    color: #ff2650
+    color: white;
 }
 
 .errors input {
-    border-color: #aa1754;
+    border-color: white;
     background-color: #f4eeff;
 }
 
 .errors label{
- color: #aaff54;
+ color: white;
 }

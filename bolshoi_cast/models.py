@@ -29,5 +29,5 @@ class Artist(models.Model):
     photo = models.CharField(max_length=20000,default=50,null=True,blank=True)
 
     def __str__(self):
-        return f'{self.name},{self.realm},{self.position}{self.photo}'
+        return f'{self.name},{self.realm}'
 

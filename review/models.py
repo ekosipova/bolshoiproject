@@ -1,13 +1,8 @@
 from django.db import models
 from django.core.validators import MinLengthValidator
+from bolshoi_cast.models import Artist
 
-class Feedback(models.Model):
-    CHOICES = [
-        ('Балет','Балет'),
-        ('Опера', 'Опера'),
-        ('Оркестр','Оркестр')
-    ]
-    realm = models.CharField(max_length=40,choices=CHOICES,default='Балет')
-    name = models.CharField(max_length=100,validators=[MinLengthValidator(2)])
+class Feedbacks(models.Model):
+    artist = models.ForeignKey(Artist, on_delete=models.CASCADE,verbose_name='artist_name',default=1)
     rating = models.PositiveIntegerField()
     feedback = models.TextField()

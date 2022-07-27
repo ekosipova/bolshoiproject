@@ -1,9 +1,8 @@
 from django.urls import path
-from .views import FeedBackView,DoneView,FeedBackUpdateView,ListFeedBack
+from .views import ReviewPage,DoneView
+
 
 urlpatterns = [
-    path('',FeedBackView.as_view()),
+    path('',ReviewPage.as_view(),name= 'review'),
     path('done',DoneView.as_view()),
-    path('<int:pk>',FeedBackUpdateView.as_view()),
-    path('list/',ListFeedBack.as_view())
-]
+      ]
