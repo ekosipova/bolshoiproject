@@ -1,7 +1,6 @@
 from .forms import FeedbackForm
-from .models import Feedbacks
 from django.views.generic.base import TemplateView
-from django.views.generic.edit import CreateView,FormView
+from django.views.generic.edit import FormView
 
 
 class ReviewPage(FormView):
